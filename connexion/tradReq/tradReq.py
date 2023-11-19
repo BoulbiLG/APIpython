@@ -5,6 +5,7 @@ import sys
 from datetime import time
 from routes.calcul.TPR import calculate_tpr
 from routes.calcul.SLR import calculate_slr
+from routes.calcul.SLRCount import calculate_SLRCount #ajout
 from routes.calcul.killzone import calculate_killzone
 from routes.calcul.session import determine_session
 from routes.calcul.calculate_duration import calculate_time_duration
@@ -219,6 +220,9 @@ def save_trade_request():
             overtradenumber = find_overtrade(data)
             data['overtrading'] = overtradenumber
 
+            slrcount = calculate_SLRCount(data) #ajout
+            data['SLRCount'] = slrcount
+
           
 
             
@@ -327,6 +331,7 @@ def save_trade_request():
             "duration": data.get('duration'),
             "TPR": data.get('TPR'),
             "SLR": data.get('SLR'),
+            "SLRCount": data.get('SLRCount'),
             "exitReason":data.get('exitReason'),
             "RR": data.get('RR'),
             "RROpen": RROpen.get(data.get('identifier')),
