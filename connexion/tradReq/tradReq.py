@@ -331,7 +331,7 @@ def save_trade_request():
             "duration": data.get('duration'),
             "TPR": data.get('TPR'),
             "SLR": data.get('SLR'),
-            "SLRCount": data.get('SLRCount'),
+            "SLRCount": data.get('SLRCount'), #ajout
             "exitReason":data.get('exitReason'),
             "RR": data.get('RR'),
             "RROpen": RROpen.get(data.get('identifier')),
