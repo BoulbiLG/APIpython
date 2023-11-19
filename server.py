@@ -74,6 +74,7 @@ from routes.calcul.session import session
 
 from routes.graphique.general.psychologie import psychologie
 from routes.graphique.general.SLR import SLR
+from routes.calcul.SLRCount import SLRCount #ajout
 from routes.graphique.general.TPR import TPR
 from routes.calcul.Tilts import Tilts
 #from routes.calcul.tradecount import tradecount
@@ -191,6 +192,7 @@ app.register_blueprint(balanceopen)
 app.register_blueprint(tilt)
 app.register_blueprint(overtrade)
 app.register_blueprint(pfreal)
+app.register_blueprint(SLRCount) #ajout
 
 app.register_blueprint(profitw)
 
